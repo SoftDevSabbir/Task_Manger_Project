@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:shimmer/shimmer.dart';
 import 'package:task_manager_app/data/models/task_count.dart';
 import 'package:task_manager_app/data/models/task_list_model.dart';
 import 'package:task_manager_app/data/models/task_list_status_count_model.dart';
