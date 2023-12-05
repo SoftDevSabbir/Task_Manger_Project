@@ -38,7 +38,7 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("Your Email Address",
+                    Text("Your Email Address ",
                         style: Theme.of(context).textTheme.bodyLarge),
                     const SizedBox(height: 8),
                     Text(

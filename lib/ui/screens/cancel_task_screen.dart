@@ -53,6 +53,7 @@ class _CancelTaskScreenState extends State<CancelTaskScreen> {
                 replacement: Center(
                   child: CircularProgressIndicator(color: PrimaryColor.color),
                 ),
+
                 child: RefreshIndicator(
                   color: PrimaryColor.color,
                   onRefresh: getTaskList,

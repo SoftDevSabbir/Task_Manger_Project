@@ -20,6 +20,7 @@ class UpdateProfileScreen extends StatefulWidget {
   State<UpdateProfileScreen> createState() => _UpdateProfileScreenState();
 }
 
+
 class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
   final TextEditingController _emailInputTEController = TextEditingController();
   final TextEditingController _firstNameInputTEController =

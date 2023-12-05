@@ -16,6 +16,7 @@ class UserModel {
     photo = json['photo'];
   }
 
+
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
     data['email'] = email;

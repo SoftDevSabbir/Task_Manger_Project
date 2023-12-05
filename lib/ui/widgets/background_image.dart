@@ -11,6 +11,7 @@ class WithBackGroundImage extends StatelessWidget {
     this.showBottomCircularLoading = false,
   });
 
+
   @override
   Widget build(BuildContext context) {
     return Stack(

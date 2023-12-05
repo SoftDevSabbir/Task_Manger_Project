@@ -17,6 +17,7 @@ class FormValidation {
     }
   }
 
+
   static String? inputValidation(String? value) {
     if (value?.trim().isEmpty ?? true) {
       return "Please fill-up the input field.";

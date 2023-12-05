@@ -12,6 +12,7 @@ enum TaskStatus {
   Cancelled,
 }
 
+
 class TaskListCard extends StatefulWidget {
   final Task task;
   final VoidCallback onStatusChangeRefresh;

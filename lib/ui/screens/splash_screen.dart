@@ -12,6 +12,7 @@ class SplashScreen extends StatefulWidget {
   State<SplashScreen> createState() => _SplashScreenState();
 }
 
+
 class _SplashScreenState extends State<SplashScreen> {
   void splashScreenTimeOut() async {
     bool isLoggedIn = await Auth.checkUserAuthState();

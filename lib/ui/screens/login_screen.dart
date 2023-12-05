@@ -44,7 +44,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("Get Started With",
+                    Text("Get Started With ",
                         style: Theme.of(context).textTheme.bodyLarge),
                     const SizedBox(height: 16),
                     TextFormField(

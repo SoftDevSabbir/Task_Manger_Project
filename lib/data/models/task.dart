@@ -24,4 +24,5 @@ class Task {
     data['createdDate'] = createdDate;
     return data;
   }
+
 }

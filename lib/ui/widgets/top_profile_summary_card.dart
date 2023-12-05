@@ -16,6 +16,7 @@ class TopProfileSummeryCard extends StatefulWidget {
     this.onTapStatus = true,
   });
 
+
   @override
   State<TopProfileSummeryCard> createState() => _TopProfileSummeryCardState();
 }

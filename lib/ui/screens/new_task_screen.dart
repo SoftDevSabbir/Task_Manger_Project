@@ -43,6 +43,7 @@ class _NewTaskScreenState extends State<NewTaskScreen> {
     }
   }
 
+
   Future<void> getTaskList() async {
     getTaskListInProgress = true;
     if (mounted) {

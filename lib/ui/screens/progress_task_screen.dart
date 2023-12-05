@@ -14,6 +14,7 @@ class ProgressTaskScreen extends StatefulWidget {
   State<ProgressTaskScreen> createState() => _ProgressTaskScreenState();
 }
 
+
 class _ProgressTaskScreenState extends State<ProgressTaskScreen> {
   bool getTaskListInProgress = false;
   TaskListModel taskListModel = TaskListModel();

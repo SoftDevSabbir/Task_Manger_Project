@@ -43,6 +43,7 @@ class NetworkCaller {
     }
   }
 
+
   static Future<NetworkResponse> getRequest(String url) async {
     try {
       final Response response = await get(Uri.parse(url), headers: {

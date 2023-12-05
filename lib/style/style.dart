@@ -5,6 +5,7 @@ class PrimaryColor {
   static Color color = const Color(0xFF21bf73);
 }
 
+
 PinTheme customPinTheme() {
   return PinTheme(
     shape: PinCodeFieldShape.box,

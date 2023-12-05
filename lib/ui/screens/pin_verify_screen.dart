@@ -17,6 +17,7 @@ class PinVerifyScreen extends StatefulWidget {
   State<PinVerifyScreen> createState() => _PinVerifyScreenState();
 }
 
+
 class _PinVerifyScreenState extends State<PinVerifyScreen> {
   Map<String, String> pinCode = {'otp': ''};
   bool pinVerifyInProgress = false;

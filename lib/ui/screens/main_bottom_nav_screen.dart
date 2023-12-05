@@ -39,7 +39,7 @@ class _MainBottomNavScreenState extends State<MainBottomNavScreen> {
           tabs: [
             GButton(
               icon: Icons.home,
-              text: 'New Task',
+              text: 'New Task ',
             ),
             GButton(
               icon: Icons.sync_sharp,
