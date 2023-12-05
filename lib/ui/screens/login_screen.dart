@@ -57,6 +57,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     const SizedBox(height: 8),
                     TextFormField(
+                      keyboardType: TextInputType.visiblePassword,
                       controller: _passwordInputTEController,
                       obscureText: true,
                       decoration: const InputDecoration(
