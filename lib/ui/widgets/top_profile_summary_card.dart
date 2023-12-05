@@ -6,6 +6,7 @@ import 'package:task_manager_app/style/style.dart';
 import 'package:task_manager_app/ui/controller/auth_controller.dart';
 import 'package:task_manager_app/ui/screens/login_screen.dart';
 import 'package:task_manager_app/ui/screens/update_profile_screen.dart';
+import 'package:task_manager_app/ui/widgets/custom_colors.dart';
 
 class TopProfileSummeryCard extends StatefulWidget {
   final bool onTapStatus;

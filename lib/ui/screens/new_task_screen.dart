@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shimmer/shimmer.dart';
 import 'package:task_manager_app/data/models/task_count.dart';
 import 'package:task_manager_app/data/models/task_list_model.dart';
 import 'package:task_manager_app/data/models/task_list_status_count_model.dart';
@@ -7,6 +8,7 @@ import 'package:task_manager_app/data/network_caller/network_response.dart';
 import 'package:task_manager_app/data/utility/urls.dart';
 import 'package:task_manager_app/style/style.dart';
 import 'package:task_manager_app/ui/screens/add_new_task_screen.dart';
+import 'package:task_manager_app/ui/widgets/custom_colors.dart';
 import 'package:task_manager_app/ui/widgets/summary_card.dart';
 import 'package:task_manager_app/ui/widgets/task_list_card.dart';
 import 'package:task_manager_app/ui/widgets/top_profile_summary_card.dart';
@@ -67,6 +69,7 @@ class _NewTaskScreenState extends State<NewTaskScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.basewhite60Color,
       body: SafeArea(
         child: Column(
           children: [
@@ -101,7 +104,10 @@ class _NewTaskScreenState extends State<NewTaskScreen> {
               child: Visibility(
                 visible: getTaskListInProgress == false,
                 replacement: Center(
-                  child: CircularProgressIndicator(color: PrimaryColor.color),
+                  child: CircularProgressIndicator(
+                    //valueColor:
+                      backgroundColor:Colors.blueGrey,
+                      color: PrimaryColor.color),
                 ),
                 child: RefreshIndicator(
                   color: PrimaryColor.color,
@@ -109,17 +115,17 @@ class _NewTaskScreenState extends State<NewTaskScreen> {
                   child: ListView.builder(
                     itemCount: taskListModel.taskList?.length ?? 0,
                     itemBuilder: (context, index) {
-                      return TaskListCard(
-                        task: taskListModel.taskList![index],
-                        onStatusChangeRefresh: () {
-                          getTaskList();
-                          getTaskStatusCount();
-                        },
-                        taskUpdateStatusInProgress: (inProgress) {
-                          getTaskListInProgress = inProgress;
-                          setState(() {});
-                        },
-                      );
+                      return  TaskListCard(
+                          task: taskListModel.taskList![index],
+                          onStatusChangeRefresh: () {
+                            getTaskList();
+                            getTaskStatusCount();
+                          },
+                          taskUpdateStatusInProgress: (inProgress) {
+                            getTaskListInProgress = inProgress;
+                            setState(() {});
+                          },
+                        );
                     },
                   ),
                 ),

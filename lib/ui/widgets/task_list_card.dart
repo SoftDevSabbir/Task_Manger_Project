@@ -3,6 +3,7 @@ import 'package:task_manager_app/data/models/task.dart';
 import 'package:task_manager_app/data/network_caller/network_caller.dart';
 import 'package:task_manager_app/data/utility/urls.dart';
 import 'package:task_manager_app/style/style.dart';
+import 'package:task_manager_app/ui/widgets/custom_colors.dart';
 
 enum TaskStatus {
   New,
@@ -45,6 +46,8 @@ class _TaskListCardState extends State<TaskListCard> {
   @override
   Widget build(BuildContext context) {
     return Card(
+      color: AppColors.basewhite60Color,
+      elevation: 4,
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 4),
         child: ListTile(
@@ -84,7 +87,7 @@ class _TaskListCardState extends State<TaskListCard> {
                         onPressed: () {
                           showUpdateDialog();
                         },
-                        icon: Icon(Icons.edit_note, color: PrimaryColor.color),
+                        icon: Icon(Icons.edit, color: PrimaryColor.color),
                       ),
                       IconButton(
                         onPressed: () {
