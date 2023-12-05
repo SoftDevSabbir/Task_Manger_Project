@@ -6,7 +6,6 @@ import 'package:task_manager_app/style/style.dart';
 import 'package:task_manager_app/ui/controller/auth_controller.dart';
 import 'package:task_manager_app/ui/screens/login_screen.dart';
 import 'package:task_manager_app/ui/screens/update_profile_screen.dart';
-import 'package:task_manager_app/ui/widgets/custom_colors.dart';
 
 class TopProfileSummeryCard extends StatefulWidget {
   final bool onTapStatus;
@@ -65,16 +64,40 @@ class _TopProfileSummeryCardState extends State<TopProfileSummeryCard> {
       ),
       trailing: IconButton(
         onPressed: () async {
-          await Auth.clearUserAuthState();
-          if (mounted) {
-            Navigator.pushAndRemoveUntil(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const LoginScreen(),
-              ),
-              (route) => false,
-            );
-          }
+          AlertDialog(
+            title: Text("Loged Out?"),
+            actions: [
+              Row(
+                children: [
+           TextButton(onPressed: (){
+             Navigator.pop(context);
+           }, child: Text("No")),
+                  TextButton(onPressed: ()async{
+                    await Auth.clearUserAuthState();
+                    if (mounted) {
+                      Navigator.pushAndRemoveUntil(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const LoginScreen(),
+                        ),
+                            (route) => false,
+                      );
+                    }
+                  }, child: Text("Yes"))
+                ],
+              )
+            ],
+          );
+          // await Auth.clearUserAuthState();
+          // if (mounted) {
+          //   Navigator.pushAndRemoveUntil(
+          //     context,
+          //     MaterialPageRoute(
+          //       builder: (context) => const LoginScreen(),
+          //     ),
+          //     (route) => false,
+          //   );
+          // }
         },
         icon: const Icon(Icons.logout),
       ),
