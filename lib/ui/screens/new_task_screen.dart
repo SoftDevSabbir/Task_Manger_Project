@@ -78,8 +78,8 @@ class _NewTaskScreenState extends State<NewTaskScreen> {
               visible: getTaskStatusCountInProgress == false &&
                   (taskListStatusCountModel.taskCountList?.isNotEmpty ?? false),
               replacement: LinearProgressIndicator(
-                color: PrimaryColor.color,
-                backgroundColor: Colors.grey,
+                color: AppColors.baseDarkPinkColor,
+                backgroundColor: Colors.red,
               ),
               child: SizedBox(
                 height: 100,

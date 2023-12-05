@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:typed_data';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:task_manager_app/style/style.dart';
 import 'package:task_manager_app/ui/controller/auth_controller.dart';
@@ -64,40 +65,7 @@ class _TopProfileSummeryCardState extends State<TopProfileSummeryCard> {
       ),
       trailing: IconButton(
         onPressed: () async {
-          AlertDialog(
-            title: Text("Loged Out?"),
-            actions: [
-              Row(
-                children: [
-           TextButton(onPressed: (){
-             Navigator.pop(context);
-           }, child: Text("No")),
-                  TextButton(onPressed: ()async{
-                    await Auth.clearUserAuthState();
-                    if (mounted) {
-                      Navigator.pushAndRemoveUntil(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const LoginScreen(),
-                        ),
-                            (route) => false,
-                      );
-                    }
-                  }, child: Text("Yes"))
-                ],
-              )
-            ],
-          );
-          // await Auth.clearUserAuthState();
-          // if (mounted) {
-          //   Navigator.pushAndRemoveUntil(
-          //     context,
-          //     MaterialPageRoute(
-          //       builder: (context) => const LoginScreen(),
-          //     ),
-          //     (route) => false,
-          //   );
-          // }
+          MyAlertDialog(context);
         },
         icon: const Icon(Icons.logout),
       ),
@@ -108,4 +76,40 @@ class _TopProfileSummeryCardState extends State<TopProfileSummeryCard> {
   String get userFullName {
     return '${Auth.user?.firstName ?? ''} ${Auth.user?.lastName ?? ''}';
   }
+}
+
+MyAlertDialog(context){
+  return showDialog(context: context, builder: (context) => Expanded(child: Column(
+    mainAxisSize: MainAxisSize.min,
+    children: [
+      AlertDialog(
+        title: Text('Log Out !',style: TextStyle(color: Colors.green,fontSize: 25),),
+        content: Text('Are You Sure Log Out?',style: TextStyle(color: Colors.green),),
+        actions: [
+
+          CupertinoButton(
+            onPressed: () { },
+            child: TextButton(onPressed: (){
+              Navigator.of(context).pop();
+            }, child: Text('No')),
+          ),
+          CupertinoButton(
+            onPressed: () {},
+            child: TextButton(onPressed: ()async{
+              await Auth.clearUserAuthState();
+
+                Navigator.pushAndRemoveUntil(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const LoginScreen(),
+                  ),
+                  (route) => false,
+                );
+
+            }, child: Text('Yes')),
+          ),
+        ],
+      ),
+    ],
+  )),);
 }

@@ -14,7 +14,6 @@ class ProgressTaskScreen extends StatefulWidget {
   State<ProgressTaskScreen> createState() => _ProgressTaskScreenState();
 }
 
-
 class _ProgressTaskScreenState extends State<ProgressTaskScreen> {
   bool getTaskListInProgress = false;
   TaskListModel taskListModel = TaskListModel();
@@ -52,7 +51,10 @@ class _ProgressTaskScreenState extends State<ProgressTaskScreen> {
               child: Visibility(
                 visible: getTaskListInProgress == false,
                 replacement: Center(
-                  child: CircularProgressIndicator(color: PrimaryColor.color),
+                  child: CircularProgressIndicator(
+                    color: PrimaryColor.color,
+                    backgroundColor: Colors.red,
+                  ),
                 ),
                 child: RefreshIndicator(
                   color: PrimaryColor.color,

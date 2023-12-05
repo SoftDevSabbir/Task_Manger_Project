@@ -52,7 +52,9 @@ class _CompleteTaskScreenState extends State<CompleteTaskScreen> {
               child: Visibility(
                 visible: getTaskListInProgress == false,
                 replacement: Center(
-                  child: CircularProgressIndicator(color: PrimaryColor.color),
+                  child: CircularProgressIndicator(color: PrimaryColor.color,
+                  backgroundColor: Colors.red,
+                  ),
                 ),
                 child: RefreshIndicator(
                   color: PrimaryColor.color,
