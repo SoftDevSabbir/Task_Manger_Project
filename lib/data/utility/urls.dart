@@ -9,6 +9,7 @@ class Urls {
   static String deleteTask(String taskId) => '$_baseUrl/deleteTask/$taskId';
 
 
+
   static String getProgressTaskList =
       '$_baseUrl/listTaskByStatus/${TaskStatus.Progress.name}';
   static String getCompleteTaskList =

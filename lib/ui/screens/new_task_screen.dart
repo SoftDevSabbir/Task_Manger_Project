@@ -19,6 +19,7 @@ class NewTaskScreen extends StatefulWidget {
   State<NewTaskScreen> createState() => _NewTaskScreenState();
 }
 
+
 class _NewTaskScreenState extends State<NewTaskScreen> {
   bool getTaskListInProgress = false;
   bool getTaskStatusCountInProgress = false;

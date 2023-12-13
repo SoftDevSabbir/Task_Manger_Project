@@ -19,3 +19,4 @@ PinTheme customPinTheme() {
     selectedFillColor: PrimaryColor.color,
   );
 }
+

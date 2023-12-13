@@ -10,6 +10,7 @@ class SummaryCard extends StatelessWidget {
     required this.summaryTitle,
   });
 
+
   @override
   Widget build(BuildContext context) {
     return Card(

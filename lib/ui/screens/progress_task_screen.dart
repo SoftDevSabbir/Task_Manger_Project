@@ -18,6 +18,7 @@ class _ProgressTaskScreenState extends State<ProgressTaskScreen> {
   bool getTaskListInProgress = false;
   TaskListModel taskListModel = TaskListModel();
 
+
   Future<void> getTaskList() async {
     getTaskListInProgress = true;
     if (mounted) {

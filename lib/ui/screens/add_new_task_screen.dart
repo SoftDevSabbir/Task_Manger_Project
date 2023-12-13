@@ -12,6 +12,7 @@ import 'package:task_manager_app/ui/widgets/top_profile_summary_card.dart';
 class AddNewTaskScreen extends StatefulWidget {
   const AddNewTaskScreen({super.key});
 
+
   @override
   State<AddNewTaskScreen> createState() => _AddNewTaskScreenState();
 }

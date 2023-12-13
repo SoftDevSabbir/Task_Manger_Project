@@ -16,6 +16,7 @@ import 'package:task_manager_app/ui/widgets/top_profile_summary_card.dart';
 class UpdateProfileScreen extends StatefulWidget {
   const UpdateProfileScreen({super.key});
 
+
   @override
   State<UpdateProfileScreen> createState() => _UpdateProfileScreenState();
 }

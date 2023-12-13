@@ -14,6 +14,7 @@ class CancelTaskScreen extends StatefulWidget {
   State<CancelTaskScreen> createState() => _CancelTaskScreenState();
 }
 
+
 class _CancelTaskScreenState extends State<CancelTaskScreen> {
   bool getTaskListInProgress = false;
   TaskListModel taskListModel = TaskListModel();

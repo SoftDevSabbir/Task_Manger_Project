@@ -11,6 +11,7 @@ class Auth {
   static UserModel? user;
 
 
+
   static Future<void> saveUserInformation(String t, UserModel model) async {
     final SharedPreferences sharedPreferences =
         await SharedPreferences.getInstance();
